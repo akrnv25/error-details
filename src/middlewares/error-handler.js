@@ -7,7 +7,7 @@ const errorHandler = (err, req, res, next) => {
   console.log(code);
   console.log(name);
   console.log(detailsStack);
-  res.status(400).json({ success: false, error: { code, message } });
+  res.status(code).json({ success: false, error: { code, message } });
 };
 
 module.exports = errorHandler;
