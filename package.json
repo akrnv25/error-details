@@ -1,0 +1,30 @@
+{
+  "name": "error-details",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv/config ./src/index.js",
+    "dev": "nodemon -r dotenv/config ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akrnv25/error-details.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akrnv25/error-details/issues"
+  },
+  "homepage": "https://github.com/akrnv25/error-details#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3"
+  },
+  "dependencies": {
+    "axios": "^1.2.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
