@@ -8,7 +8,7 @@ class ItemsController {
       const itemsRes = await itemsService.get(id);
       res.status(200).json(itemsRes);
     } catch (e) {
-      const error = new BaseError({ origin: e, details: `ItemsController.get, id=${id}` });
+      const error = new BaseError({ origin: e, details: ['ItemsController.get', `id=${id}`] });
       next(error);
     }
   }
@@ -18,7 +18,7 @@ class ItemsController {
       const itemsRes = await itemsService.getAll();
       res.status(200).json(itemsRes);
     } catch (e) {
-      const error = new BaseError({ origin: e, details: 'ItemsController.getAll' });
+      const error = new BaseError({ origin: e, details: ['ItemsController.getAll'] });
       next(error);
     }
   }

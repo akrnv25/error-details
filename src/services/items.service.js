@@ -12,7 +12,7 @@ class ItemsService {
     } catch (e) {
       const error = new BaseError({
         message: e.response.data,
-        details: `ItemsService.get, id=${id}`
+        details: ['ItemsService.get', `id=${id}`]
       });
       return Promise.reject(error);
     }
@@ -25,7 +25,7 @@ class ItemsService {
       const { data } = await axios({ method, url });
       return { success: true, data };
     } catch (e) {
-      const error = new BaseError({ message: e.response.data, details: 'ItemsService.getAll' });
+      const error = new BaseError({ message: e.response.data, details: ['ItemsService.getAll'] });
       return Promise.reject(error);
     }
   }
